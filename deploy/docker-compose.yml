@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+################### APPs #######################
+
+
+
+################### DBs #######################
+
+  pet-spring-batch-db:
+    image: postgres:${POSTGRES_TAG:-10.3-alpine}
+    container_name: pet-spring-batch-db
+    volumes:
+      - "./petbatch/db/create:/docker-entrypoint-initdb.d:ro"

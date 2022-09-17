@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: pet-batch
+  batch:
+    jdbc:
+      initialize-schema: always
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:postgresql://localhost:5490/pet_spring_batch
+    username: spring_batch
+    password: batch
+    driver-class-name: org.postgresql.Driver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    topic: demo
+server:
+  servlet:
+    context-path: /pet-batch
+  port: 9090

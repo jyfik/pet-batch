@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+################### SERVICES #######################
+
+  pet-spring-batch-db:
+    ports:
+      - '5490:5432'
+
+################### COMMON SERVICES #######################
